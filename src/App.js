@@ -1,6 +1,12 @@
 import React,{useState,useEffect} from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth , GoogleAuthProvider , signInWithPopup} from 'firebase/auth';
+import GoogleButton from 'react-google-button'
+import 'bootstrap/dist/css/bootstrap.css';
+import { Container } from 'react-bootstrap';
+import './bootstrap.min.css'
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCnHmvJAbXMX11ZR8R31Vung1UEya-ciMA",
@@ -50,11 +56,16 @@ const App = () => {
       }>Sign Out</button>
     </div>
   }
-  return <div>
+  return (
+    <>
+<Container className="contact-content debug-border">
     
-    <button onClick={handleGoogleSignIn}>Sign In with Google</button>
-  </div>
-
+    <h1 className="text-center" > Sign-In to continue</h1>
+    <GoogleButton className="justify-content-center" onClick={handleGoogleSignIn}/>
+    </Container>  
+    </>
+  
+  );
 }
 
 export default App;
