@@ -1,0 +1,16 @@
+*{
+    background-image:url("https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bG9naW58ZW58MHx8MHx8&w=1000&q=80");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-blend-mode: darken;
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 12vh;
+    border: 5px solid black;    
+    border-radius: 10vh;
+}

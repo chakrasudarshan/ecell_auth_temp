@@ -3,8 +3,9 @@ import { initializeApp } from 'firebase/app';
 import { getAuth , GoogleAuthProvider , signInWithPopup} from 'firebase/auth';
 import GoogleButton from 'react-google-button'
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container } from 'react-bootstrap';
+import { Container,Button } from 'react-bootstrap';
 import './bootstrap.min.css'
+import './App.css';
 
 
 
@@ -46,22 +47,28 @@ const App = () => {
   }
   , []);
   if(user){
-    return <div>
-      <h1>Welcome {user.displayName}. You have successfully signed in!!</h1>
+    return (<Container style={{display: 'flex',flexDirection: 'column', justifyContent:'center', alignItems:'center', height: '70' ,width:'80vh',marginTop:'20vh',border:'6px solid black'}}>
+    <div style={{display: 'flex',flexDirection: 'column', justifyContent:'center', alignItems:'center',marginTop:'2vh'}}>
+      <h1>Welcome {user.displayName}!!</h1>
+      <h5>{user.email}</h5>
+      <h4>You have successfully logged in</h4>
       <img  src={user.photoURL} alt=""/>
       <br/>
-      <button onClick={()=>{
+      <Button onClick={()=>{
         auth.signOut();
       }
-      }>Sign Out</button>
+      } variant="danger">
+      Sign Out </Button>
     </div>
+    </Container>
+    );
   }
   return (
     <>
-<Container className="contact-content debug-border">
-    
-    <h1 className="text-center" > Sign-In to continue</h1>
-    <GoogleButton className="justify-content-center" onClick={handleGoogleSignIn}/>
+<Container  style={{display: 'flex',flexDirection: 'column', justifyContent:'center', alignItems:'center', height: '50vh',width:'50vh',marginTop:'20vh',border:'10px solid black'}}  className="contact-content debug-border">
+    <h1 className="text-center"> Sign-In to continue</h1>
+    <br/>
+    <GoogleButton mt={50} className="justify-content-center" onClick={handleGoogleSignIn}/>
     </Container>  
     </>
   
