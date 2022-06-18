@@ -52,7 +52,8 @@ const App = () => {
       <h1>Welcome {user.displayName}!!</h1>
       <h5>{user.email}</h5>
       <h4>You have successfully logged in</h4>
-      <img  src={user.photoURL} alt=""/>
+      <img  src={user.photoURL} alt="Error loading"/>
+      <br/>
       <br/>
       <Button onClick={()=>{
         auth.signOut();
