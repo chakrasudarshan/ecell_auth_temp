@@ -10,12 +10,14 @@ import './App.css';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCnHmvJAbXMX11ZR8R31Vung1UEya-ciMA",
-  authDomain: "g-signin-84cf8.firebaseapp.com",
-  projectId: "g-signin-84cf8",
-  storageBucket: "g-signin-84cf8.appspot.com",
-  messagingSenderId: "995714433330",
-  appId: "1:995714433330:web:fa424d83404d769c6c972b"
+  apiKey: "AIzaSyBcQr-xm0gqX0C0eB025v63feoRXRyx6dM",
+  authDomain: "team-expansion-54ae7.firebaseapp.com",
+  databaseURL: "https://team-expansion-54ae7-default-rtdb.firebaseio.com",
+  projectId: "team-expansion-54ae7",
+  storageBucket: "team-expansion-54ae7.appspot.com",
+  messagingSenderId: "932038990518",
+  appId: "1:932038990518:web:b67532c58cf678c6bfa417",
+  measurementId: "G-W310M4WJL0"
 };
 
 const app = initializeApp(firebaseConfig);
